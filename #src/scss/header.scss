@@ -65,6 +65,7 @@
 			margin-top: 5px;
 			width: 100%;	
 			text-align: center;	
+			margin-top: 15px;
 		}
 		
 		// .header__button_link
@@ -110,6 +111,9 @@
 		line-height: 25px;
 		font-weight: 600;
 		margin-right: 20px;
+		@media (max-width:$md4+px) {
+			margin-bottom: 20px;
+		}
 	}
 	// .contacts-header__phone
 	&__phone {
@@ -118,6 +122,9 @@
 		line-height: 25px;
 		font-weight: 600;
 		margin-right: 20px;
+		@media (max-width:$md4+px) {
+			font-size: 15px;
+		}
 	}
 }
 .header-logo {
@@ -125,6 +132,10 @@
 		flex-direction: row;
 	margin-top: 16px;
 	height: 52px;
+	& img {
+		height: 52px;
+		width: 156px;
+	}
 	// .header-logo__text
 	&__text {
 		color: $white;

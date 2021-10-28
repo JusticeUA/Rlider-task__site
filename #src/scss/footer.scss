@@ -57,6 +57,10 @@ footer {
 		// .footer__logo
 		&__logo {
             margin-bottom: 3px;
+            & img{
+                height: 56px;
+                width: 146px;
+            }
 		}
 		// .footer__copy
 		&__copy {
@@ -100,6 +104,11 @@ footer {
             &:hover{
                 text-decoration: underline;
             }
+            @media (max-width:$md3+px) {
+                margin-top: 13px;
+                font-size: 16px;
+            }
+            
 		}
 		// .footer__address
 		&__address {
