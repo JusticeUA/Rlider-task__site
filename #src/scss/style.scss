@@ -136,18 +136,42 @@ body {
 		position: relative;
 		// .main-block__container
 		&__container {
+			position: relative;
+			z-index: 6;
+			display: flex;
 		}
 		// .main-block__about
 		&__about {
+			position: relative;
+			@include adaptiv-value('padding-top',314,240,1)
+			
 		}
 		// .main-block__title
 		&__title {
+			
+			font-weight: 900;
+			font-size: 48px;
+			line-height: 64px;
+			color: $white;
+			font-family: 'Playfair Display';
+			padding-bottom: 31px;
 		}
 		// .main-block__text
 		&__text {
+			font-family: 'Open Sans';			
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 33px;
+			color: $white;
 		}
 		// .main-block__arrow
 		&__arrow {
+			position: absolute;
+			right: 10px;
+		}
+		//.main-block__form
+		&__form {
+			@include adaptiv-value('margin-top',314,240,1)
 		}
 		// .main-block__opacity
 		&__opacity {
@@ -159,6 +183,7 @@ body {
 			height: 100%;
 			top: 0;
 			left: 0;
+			z-index: 4;
 		}
 		// .main-block__img
 		&__img {
@@ -168,11 +193,57 @@ body {
 .arrow {
 }
 .form {
+		display: flex;
+		justify-content:space-between;
+		position: relative;
+		z-index: 6;
+		
+		flex-direction: row;
+		align-items: center;
+		height: 357px;
+		border: 3px solid #FFFFFF;
+		//width: 556px;
 		// .form__text
 		&__text {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			//left: 0;
+			position: relative;
+			color: $white;
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 33px;
+			text-transform: uppercase;
+			text-align: center;
+			transform: rotate(-90deg) translateY(-180px);
+			white-space: nowrap;
+			background-color: rgba(255, 255, 255, 0.4);
+			//padding: 23px 27px;
+			//height: 357px;
+			width: 357px;
+			height: 80px;
+			
 		}
 		// .form__body
 		&__body {
+			display: flex;
+			flex-direction: column;
+			margin: 67px 95px 67px 0px;
+			max-width: 290px;
+		}
+		//form__input
+		&__input{
+			background: transparent;
+			color: $white;
+			height: 45px;
+			font-size: 13px;
+			line-height: 18px;
+			vertical-align: middle;
+			border: 1px solid #FFFFFF;
+			margin-bottom: 9px;
+			padding: 13px 0 14px 20px;
 		}
 		// .form__name
 		&__name {
@@ -185,6 +256,7 @@ body {
 		}
 		// .form__button
 		&__button {
+			margin-top: 10px;
 		}
 }
 // <!--Main block END-->
@@ -298,6 +370,20 @@ body {
 		}
 }
 .yellow-button {
+	color: $mainColor;
+	background-color: $yellow;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	height: 45px;
+	transition: all 0.1s ease 0s;
+	&:hover{
+		text-decoration: underline;
+		font-size: 15px;
+	}
 }
 // <!--Programs End-->
 // <!--Experts begin-->
